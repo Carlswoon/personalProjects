@@ -1,0 +1,120 @@
+body {
+  margin: 0; /* Remove default margin */
+  padding: 0; /* Remove default padding */
+  height: 100vh; /* Set height to 100% of the viewport height */
+  width: 100vw; /* Set width to 100% of the viewport width */
+  /* background-image: url('./assets/images/Welcome\ Page.gif'); /* Path to your .gif */
+  background-size: cover; /* Resize proportionally while covering the screen */
+  background-repeat: no-repeat; /* Prevent repeating */
+  background-position: center; /* Center the .gif */
+  background-attachment: fixed; /* Optional: Makes background static during scroll */
+}
+
+.game {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+  background-color: #f0f0f0;
+  margin: 0;
+  overflow: hidden;
+}
+  
+.gameMap {
+  display: grid;
+  grid-template-columns: repeat(10, 64px);
+  grid-template-rows: repeat(10, 64px);
+  gap: 0px;
+}
+  
+.tile {
+  width: 64px;
+  height: 64px;
+  border: 1px solid #ffffff;
+  background-color: #66BB66;
+}
+  
+.tile img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.player {
+  width: 64px;
+  height: 64px;
+  background-repeat: no-repeat;
+  background-size: 192px 256px; /* Full size of the sprite sheet (3 frames per row x 4 directions) */
+  background-position: 0 0;
+  position: relative;
+}
+
+.cat {
+  width: 64px;
+  height: 64px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+}
+  
+.start-screen {
+  text-align: center;
+  margin-top: 20%;
+  background-size: cover;
+  width: auto;
+  height: auto;
+}
+
+
+.start-screen h1 {
+  font-size: 4rem; /* Big and bold */
+  font-family: 'Comic Sans MS', 'Chalkduster', cursive; /* Playful font */
+  color: #FFD700; /* Golden color to match vibrancy */
+  text-shadow: 
+    3px 3px 10px #FF0000, /* Red glow */
+    -3px -3px 10px #00FF00, /* Green glow */
+    3px -3px 10px #0000FF; /* Blue glow */
+  text-align: center;
+  animation: rainbow-glow 3s infinite; /* Glowing rainbow animation */
+}
+
+/* Glowing rainbow animation */
+@keyframes rainbow-glow {
+  0% { text-shadow: 3px 3px 10px #FF0000, -3px -3px 10px #00FF00, 3px -3px 10px #0000FF; }
+  33% { text-shadow: 3px 3px 10px #FF7F00, -3px -3px 10px #7FFF00, 3px -3px 10px #00FFFF; }
+  66% { text-shadow: 3px 3px 10px #FFFF00, -3px -3px 10px #FF00FF, 3px -3px 10px #00FF00; }
+  100% { text-shadow: 3px 3px 10px #FF0000, -3px -3px 10px #00FF00, 3px -3px 10px #0000FF; }
+}
+
+.start-screen button {
+  padding: 15px 30px; /* Bigger button */
+  font-size: 1.5rem; /* Larger text */
+  font-family: 'Comic Sans MS', 'Chalkduster', cursive;
+  color: #FFFFFF; /* White text for contrast */
+  background: linear-gradient(90deg, #FF0000, #FF7F00, #FFFF00, #00FF00, #0000FF, #8B00FF); /* Rainbow gradient */
+  background-size: 300%;
+  border: 3px solid #FFD700; /* Golden border */
+  border-radius: 50px; /* Rounded button */
+  box-shadow: 0px 0px 15px #FFD700; /* Glowing effect */
+  cursor: pointer;
+  animation: rainbow-button 3s infinite linear; /* Gradient movement */
+  transition: transform 0.3s ease;
+}
+
+/* Rainbow gradient animation */
+@keyframes rainbow-button {
+  0% { background-position: 0%; }
+  100% { background-position: 100%; }
+}
+
+.start-screen button:hover {
+  transform: scale(1.1); /* Button grows on hover */
+  box-shadow: 0px 0px 25px #FFFFFF; /* Intense glow on hover */
+}
+
+
+.hidden {
+  display: none;
+}

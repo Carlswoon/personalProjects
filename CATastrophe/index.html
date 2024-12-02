@@ -7,9 +7,18 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="game">
+    <!-- Start Screen -->
+    <div id="startScreen" class="start-screen">
+        <h1>Welcome to The World's Biggest CATastrophe!</h1>
+        <button id="startButton">Start Game</button>
+    </div>
+
+    <!-- Game Screen (Initially Hidden) -->
+    <div id="gameScreen" class="game hidden">
         <div class="gameMap" id="gameMap"></div>
     </div>
+
     <script type="module" src="game.js"></script>
+    <script type="module" src="startScreen.js"></script>
 </body>
 </html>
