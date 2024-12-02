@@ -27,11 +27,6 @@ let playerPosition = Math.floor(totalTiles / 2); // Start position in the center
 const player = document.createElement('div'); // Create the player element
 player.classList.add('player');
 player.style.backgroundImage = `url(${playerImgSrc})`;
-player.style.backgroundSize = `${frameSize * framesPerRow}px ${frameSize * 4}px`; // Adjust to sprite sheet size
-player.style.width = `${frameSize}px`;
-player.style.height = `${frameSize}px`;
-player.style.backgroundRepeat = 'no-repeat';
-player.style.backgroundPosition = `0px 0px`;
 tiles[playerPosition].appendChild(player); // Attach the player to the initial tile
 
 spawnCat(tiles, player);

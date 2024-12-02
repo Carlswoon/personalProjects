@@ -31,15 +31,18 @@
     height: 64px;
     background-repeat: no-repeat;
     background-size: 192px 256px; /* Full size of the sprite sheet (3 frames per row x 4 directions) */
+    background-position: 0 0;
     position: relative;
   }
 
   .cat {
-    width: auto;
-    height: auto;
-    max-width: 100%;
-    max-height: 100%;
-    display: block;
+    width: 64px;
+    height: 64px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
   }
+  
   
   
