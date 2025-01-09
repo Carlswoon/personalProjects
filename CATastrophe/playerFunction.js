@@ -1,3 +1,11 @@
+export function createPlayer(imgSrc, frameSize, framesPerRow) {
+    const player = document.createElement('div');
+    player.classList.add('player');
+    player.style.backgroundImage = `url(${imgSrc})`;
+    player.style.backgroundSize = `${frameSize * framesPerRow}px auto`;
+    return player;
+}
+
 export function movePlayer(event, gameState) {
     const key = event.key.toLowerCase();
     if (!gameState.directions[key]) return; // Ignore keys other than WASD
@@ -27,13 +35,5 @@ export function movePlayer(event, gameState) {
     const xOffset = gameState.animationFrame * gameState.frameSize; // Horizontal position (frame)
     const yOffset = row * gameState.frameSize; // Vertical position (row for direction)
     gameState.player.style.backgroundPosition = `-${xOffset}px -${yOffset}px`;
-}
-
-export function createPlayer(imgSrc, frameSize, framesPerRow) {
-    const player = document.createElement('div');
-    player.classList.add('player');
-    player.style.backgroundImage = `url(${imgSrc})`;
-    player.style.backgroundSize = `${frameSize * framesPerRow}px auto`;
-    return player;
 }
   
