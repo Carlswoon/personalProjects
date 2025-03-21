@@ -6,16 +6,16 @@ function PhotoOfTheMonth({ photo }) {
   }
 
   return (
-    <div>
+    <div className="photo-of-the-month-card">
       <h1>Photo of the Month</h1>
       <img
         src={photo.src}
         alt={photo.title}
-        style={{ width: '300px', borderRadius: '8px' }}
+        className="photo-of-the-month-img"
       />
-      <div className="title">{photo.title}</div>
-      <div className="author">By {photo.author}</div>
-      <p>Votes: {photo.votes}</p>
+      <div className="photo-title">{photo.title}</div>
+      <div className="photo-author">By {photo.author}</div>
+      <p className="photo-votes">Votes: {photo.votes}</p>
     </div>
   );
 }
